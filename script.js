@@ -71,6 +71,7 @@ function setup() {
   for (let key in sounds) {
     let button = createButton(key);
     button.position(0, 0);
+    button.parent("buttons-container");
     button.mousePressed(() => setSound(key));
     buttons.push(button);
   }
@@ -78,8 +79,9 @@ function setup() {
 
   // Canvas
   var cnv = createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+  cnv.parent("canvas-container");
   cnv.mouseClicked(togglePlay);
-
+  document.getElementById("main-content-container").style.display = "block";
   fft = new p5.FFT();
 }
 

@@ -1,0 +1,402 @@
+body {
+    background: #0E0E0E;
+}
+
+#main-content-container {
+    height: inherit;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    display: none;
+}
+
+#source-code-link {
+    color: #666666;
+    font-size: 14px;
+}
+
+button {
+    font-size: 17px;
+    border: 1px solid rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
+    border-radius: 3px;
+    background: black;
+    position: static !important;
+    margin: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    font-size: 10px;
+    opacity: 0.15;
+    transition: all 0.5s ease-in-out;
+    margin: 5px auto;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+}
+
+/* Loader */
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.waveLoader {
+    height: 12.5rem;
+    width: 21.875rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.waveLoader .line {
+    height: 100%;
+    width: 0.3125rem;
+    position: relative;
+    display: inline-flex;
+    box-sizing: border-box;
+}
+
+.waveLoader .line::before,
+.waveLoader .line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    background-color: green;
+    height: 0;
+    opacity: 1;
+    border-radius: 0.625rem;
+}
+
+.waveLoader .line::before {
+    top: 0;
+    height: 90%;
+    animation: beforeAnimate 1s ease-in-out infinite alternate;
+}
+
+.waveLoader .line::after {
+    bottom: 0;
+    height: 5%;
+    animation: afterAnimate 1s ease-in-out infinite alternate;
+}
+
+.waveLoader .line:nth-child(1)::before,
+.waveLoader .line:nth-child(1)::after {
+    animation-delay: 0.05s;
+}
+
+.waveLoader .line:nth-child(1)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(1)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(2)::before,
+.waveLoader .line:nth-child(2)::after {
+    animation-delay: 0.1s;
+}
+
+.waveLoader .line:nth-child(2)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(2)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(3)::before,
+.waveLoader .line:nth-child(3)::after {
+    animation-delay: 0.15s;
+}
+
+.waveLoader .line:nth-child(3)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(3)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(4)::before,
+.waveLoader .line:nth-child(4)::after {
+    animation-delay: 0.2s;
+}
+
+.waveLoader .line:nth-child(4)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(4)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(5)::before,
+.waveLoader .line:nth-child(5)::after {
+    animation-delay: 0.25s;
+}
+
+.waveLoader .line:nth-child(5)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(5)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(6)::before,
+.waveLoader .line:nth-child(6)::after {
+    animation-delay: 0.3s;
+}
+
+.waveLoader .line:nth-child(6)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(6)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(7)::before,
+.waveLoader .line:nth-child(7)::after {
+    animation-delay: 0.35s;
+}
+
+.waveLoader .line:nth-child(7)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(7)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(8)::before,
+.waveLoader .line:nth-child(8)::after {
+    animation-delay: 0.4s;
+}
+
+.waveLoader .line:nth-child(8)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(8)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(9)::before,
+.waveLoader .line:nth-child(9)::after {
+    animation-delay: 0.45s;
+}
+
+.waveLoader .line:nth-child(9)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(9)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(10)::before,
+.waveLoader .line:nth-child(10)::after {
+    animation-delay: 0.5s;
+}
+
+.waveLoader .line:nth-child(10)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(10)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(11)::before,
+.waveLoader .line:nth-child(11)::after {
+    animation-delay: 0.55s;
+}
+
+.waveLoader .line:nth-child(11)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(11)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(12)::before,
+.waveLoader .line:nth-child(12)::after {
+    animation-delay: 0.6s;
+}
+
+.waveLoader .line:nth-child(12)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(12)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(13)::before,
+.waveLoader .line:nth-child(13)::after {
+    animation-delay: 0.65s;
+}
+
+.waveLoader .line:nth-child(13)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(13)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(14)::before,
+.waveLoader .line:nth-child(14)::after {
+    animation-delay: 0.7s;
+}
+
+.waveLoader .line:nth-child(14)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(14)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(15)::before,
+.waveLoader .line:nth-child(15)::after {
+    animation-delay: 0.75s;
+}
+
+.waveLoader .line:nth-child(15)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(15)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(16)::before,
+.waveLoader .line:nth-child(16)::after {
+    animation-delay: 0.8s;
+}
+
+.waveLoader .line:nth-child(16)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(16)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(17)::before,
+.waveLoader .line:nth-child(17)::after {
+    animation-delay: 0.85s;
+}
+
+.waveLoader .line:nth-child(17)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(17)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(18)::before,
+.waveLoader .line:nth-child(18)::after {
+    animation-delay: 0.9s;
+}
+
+.waveLoader .line:nth-child(18)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(18)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(19)::before,
+.waveLoader .line:nth-child(19)::after {
+    animation-delay: 0.95s;
+}
+
+.waveLoader .line:nth-child(19)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(19)::after {
+    background-color: #808080;
+}
+
+.waveLoader .line:nth-child(20)::before,
+.waveLoader .line:nth-child(20)::after {
+    animation-delay: 1s;
+}
+
+.waveLoader .line:nth-child(20)::before {
+    display: none;
+}
+
+.waveLoader .line:nth-child(20)::after {
+    background-color: #808080;
+}
+
+@keyframes beforeAnimate {
+    from {
+        height: 90%;
+    }
+
+    to {
+        height: 5%;
+    }
+}
+
+@keyframes afterAnimate {
+    from {
+        height: 5%;
+    }
+
+    to {
+        height: 90%;
+    }
+}
+
+#p5_loading {
+    color: #808080;
+}
+
+#loader_text {
+    color: #BEBEBE;
+    font-size: 30px;
+    z-index: 5;
+}
