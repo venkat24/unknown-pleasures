@@ -18,10 +18,10 @@ function preload() {
   sounds = {
     "epic": loadSound("sounds/epic.mp3"),
     "electronic": loadSound("sounds/electronic.mp3"),
-    "indian": loadSound("sounds/indian.mp3"),
     "rock": loadSound("sounds/rock.mp3"),
-    "acoustic": loadSound("sounds/acoustic.mp3"),
     "metal": loadSound("sounds/metal.mp3")
+    // "acoustic": loadSound("sounds/acoustic.mp3"),
+    // "indian": loadSound("sounds/indian.mp3"),
   };
   sound = sounds["epic"];
 }
