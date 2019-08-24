@@ -4,7 +4,6 @@ let tick = 0;
 // Random line cutoff values for each line, calculated once and set
 let cutoffs = [];
 
-
 // Map of sound files and the current sound file
 let sounds = {};
 let sound;
